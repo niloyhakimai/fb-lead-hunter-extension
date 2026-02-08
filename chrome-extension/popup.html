@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    :root { --primary: #2563eb; --bg: #f8fafc; --text: #1e293b; }
+    body { width: 320px; padding: 0; margin: 0; font-family: 'Segoe UI', sans-serif; background: var(--bg); color: var(--text); }
+    
+    .header { background: linear-gradient(135deg, #2563eb, #1d4ed8); padding: 15px; color: white; text-align: center; }
+    .header h2 { margin: 0; font-size: 18px; font-weight: 600; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    
+    .container { padding: 15px; }
+    
+    label { font-size: 12px; font-weight: 600; color: #64748b; margin-bottom: 5px; display: block; }
+    input, textarea { width: 100%; padding: 10px; border: 1px solid #e2e8f0; border-radius: 6px; margin-bottom: 12px; font-size: 13px; outline: none; box-sizing: border-box; transition: 0.2s; }
+    input:focus, textarea:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1); }
+    
+    .btn { width: 100%; padding: 12px; background: var(--primary); color: white; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; transition: 0.2s; }
+    .btn:hover { background: #1d4ed8; }
+    
+    .footer { text-align: center; font-size: 11px; color: #94a3b8; margin-top: 10px; }
+    
+    /* Status Badge */
+    #status { margin-top: 10px; text-align: center; font-size: 12px; font-weight: 500; height: 15px; }
+    .success { color: #16a34a; }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h2>⚡ FB Lead Hunter</h2>
+  </div>
+
+  <div class="container">
+    <label>Telegram Chat ID</label>
+    <input type="text" id="telegramId" placeholder="e.g. 7183012933">
+
+    <label>Keywords (comma separated)</label>
+    <textarea id="keywords" rows="2" placeholder="need developer, urgent, budget"></textarea>
+
+    <label>Target Group Links (Optional)</label>
+    <textarea id="groupLinks" rows="2" placeholder="https://facebook.com/groups/mygroup"></textarea>
+    <small style="color: #94a3b8; font-size: 10px; display:block; margin-top:-8px; margin-bottom:10px;">Leave empty to monitor ALL pages.</small>
+
+    <button id="saveBtn" class="btn">Save Configuration</button>
+    <div id="status"></div>
+  </div>
+
+  <div class="footer">
+    v1.0 • Connected to SaaS Cloud
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
