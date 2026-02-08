@@ -1,62 +1,126 @@
 # ⚡ FB Lead Hunter (Chrome Extension)
 
-A powerful, automated lead generation tool designed for freelancers and agencies. This Chrome Extension monitors Facebook Groups in real-time for specific keywords (e.g., "Need Developer", "Hiring") and sends instant alerts to Telegram.
+FB Lead Hunter is a lightweight, automated **lead generation Chrome Extension** built for **freelancers, agencies, and solo developers**. It monitors **Facebook Groups in real time** for high-intent keywords (e.g., *"Need Developer"*, *"Hiring"*) and instantly sends alerts to **Telegram**, so you never miss a potential client.
 
-## 🚀 Features
+---
 
-- **Real-time Monitoring:** Scans Facebook feed and groups for new posts.
-- **Smart Keyword Detection:** Alerts only when specific keywords match.
-- **Targeted Group Scanning:** Option to monitor specific group links or run globally.
-- **Junk Filtering:** Automatically ignores "Sponsored", "Suggested for you", and "Reels".
-- **Auto-Pilot Mode:** Auto-reloads pages periodically to fetch new posts even when you are away.
-- **Telegram Integration:** Sends instant notifications with the post link directly to your phone.
-- **Duplicate Protection:** Prevents sending the same alert multiple times using Session Storage.
+## 🚀 Key Features
+
+* **Real-Time Monitoring**
+  Continuously scans Facebook group feeds for newly published posts.
+
+* **Smart Keyword Detection**
+  Triggers alerts only when your defined keywords are matched.
+
+* **Targeted Group Scanning**
+  Monitor specific Facebook group URLs or run globally across groups.
+
+* **Junk & Noise Filtering**
+  Automatically ignores:
+
+  * Sponsored posts
+  * Suggested content
+  * Reels / non-text posts
+
+* **Auto-Pilot Mode**
+  Periodically auto-reloads pages to fetch new posts—even when you’re inactive.
+
+* **Telegram Notifications**
+  Sends instant alerts with the **post link + matched keyword** directly to your phone.
+
+* **Duplicate Protection**
+  Uses `sessionStorage` to prevent sending the same post multiple times.
+
+---
 
 ## 🛠 Installation (Developer Mode)
 
-Since this extension is not yet in the Chrome Web Store, you need to load it manually:
+This extension is not yet published on the Chrome Web Store. Follow these steps to install it manually:
 
-1. Download or Clone this repository.
-2. Open Chrome and go to `chrome://extensions/`.
-3. Enable **Developer mode** (top right corner toggle).
+1. **Download or clone** this repository.
+2. Open Google Chrome and go to:
+
+   ```
+   chrome://extensions/
+   ```
+3. Enable **Developer mode** (top-right toggle).
 4. Click **Load unpacked**.
 5. Select the `chrome-extension` folder from this project.
-6. The extension should now appear in your browser bar!
+6. The extension will appear in your browser toolbar.
 
-## ⚙️ Configuration
+---
 
-1. **Get Telegram Chat ID:**
-   - Search for `@userinfobot` on Telegram and start it to get your numeric ID (e.g., `12345678`).
-   - Create a new bot using `@BotFather` to get your Bot Token (Requires backend setup) or use the direct ID if using the public API version.
+## ⚙️ Configuration Guide
 
-2. **Open Extension Settings:**
-   - Click the extension icon in your browser.
-   - Enter your **Telegram Chat ID**.
-   - Add **Keywords** (comma-separated, e.g., `need developer, urgent, budget`).
-   - (Optional) Add **Target Group Links** if you want to monitor specific pages.
+### 1️⃣ Get Your Telegram Chat ID
 
-3. **Start Hunting:**
-   - Click **Save Configuration**.
-   - Navigate to a Facebook Group.
-   - The extension will automatically start scanning and auto-reload the page every few minutes to check for new leads.
+* Search for `@userinfobot` on Telegram and press **Start**.
+* Copy your numeric **Chat ID** (example: `123456789`).
+
+### 2️⃣ Create a Telegram Bot (Optional / Advanced)
+
+* Open `@BotFather` on Telegram.
+* Create a new bot and copy the **Bot Token**.
+* This is required only if you are using a **custom backend**.
+
+### 3️⃣ Configure the Extension
+
+1. Click the **FB Lead Hunter** extension icon.
+2. Enter your **Telegram Chat ID**.
+3. Add **Keywords** (comma-separated):
+
+   ```
+   need developer, hiring, urgent, budget
+   ```
+4. *(Optional)* Add **Target Facebook Group Links**.
+5. Click **Save Configuration**.
+
+---
+
+## ▶️ How to Use
+
+1. Open a Facebook Group (or any configured target group).
+2. The extension automatically starts scanning posts.
+3. Pages auto-reload every few minutes.
+4. When a keyword match is detected, you receive a **Telegram alert instantly**.
+
+---
 
 ## 📂 Project Structure
 
 ```bash
 chrome-extension/
-├── manifest.json      # Extension configuration and permissions
-├── popup.html         # The user interface (UI)
-├── popup.js           # Handles saving settings to Local Storage
-├── content.js         # The main script that scans Facebook DOM
-├── background.js      # Handles API calls and background tasks
-└── icons/             # App icons
+├── manifest.json      # Chrome extension config & permissions
+├── popup.html         # Extension popup UI
+├── popup.js           # Settings & local storage logic
+├── content.js         # Facebook DOM scanning logic
+├── background.js      # Background tasks & Telegram API calls
+└── icons/             # Extension icons
+```
 
+---
 
+## ⚠️ Disclaimer
 
-⚠️ Disclaimer
-This tool is created for educational purposes only. Automated scraping of websites may violate their Terms of Service. Use this tool responsibly and at your own risk. The developer is not responsible for any account restrictions.
+This tool is intended **for educational and personal productivity purposes only**.
 
-🤝 Contributing
-Contributions are welcome! Feel free to open an issue or submit a pull request.
+* Automated scraping may violate Facebook’s **Terms of Service**.
+* Use responsibly and at your **own risk**.
+* The developer is **not responsible** for account bans, restrictions, or data loss.
 
-Built with ❤️ for the Developer Community.
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!
+
+* Open an issue for bugs or feature requests
+* Submit a pull request for improvements
+
+---
+
+## ❤️ Community
+
+Built with passion for the **Bangladeshi Developer Community** 🇧🇩
+
+If this tool helps you land clients faster—consider giving it a ⭐ on GitHub.
